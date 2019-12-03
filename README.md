@@ -19,8 +19,8 @@ import ipyparams
 The values are now accessible in the `ipyparams.params` dictionary.
 
 ```python
-ipyparams.params['foo']  # contains "bar"
-ipyparams.params['baz']  # contains "1"
+ipyparams.params['foo']  # returns "bar"
+ipyparams.params['baz']  # returns "1"
 ```
 
 ### Duplicate parameters
@@ -29,6 +29,7 @@ URL query strings can contain multiple parameters with the same name, such as `h
 
 ```python
 import ipyparams
+ipyparams.params['foo']      # returns 'baz'
 ipyparams.raw_params['foo']  # returns ['bar', 'baz']
 ```
 
