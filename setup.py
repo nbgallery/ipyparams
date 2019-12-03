@@ -22,6 +22,7 @@ setup(
     packages=['ipyparams'],
     package_data={},
     install_requires=[],
+    python_requires='>=3.4, <4',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Topic :: Utilities',
