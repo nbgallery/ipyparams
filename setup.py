@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), 'r') as f:
 
 setup(
     name='ipyparams',
-    version='0.1.0',
+    version='0.1.1',
     author='Bill Allen',
     author_email='photo.allen@gmail.com',
     description='Send parameters/arguments to notebooks via URL query string parameters.',
@@ -18,7 +18,7 @@ setup(
     long_description_content_type='text/markdown',
     license='MIT',
     keywords='jupyter notebook parameters arguments url query'.split(),
-    url='https://github.com/gershwinlabs/ipyparams',
+    url='https://github.com/nbgallery/ipyparams',
     packages=['ipyparams'],
     package_data={},
     install_requires=[],
