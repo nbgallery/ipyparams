@@ -1,6 +1,7 @@
 # vim: expandtab tabstop=4 shiftwidth=4
 
 from collections import defaultdict
+from os.path import basename
 from time import sleep
 from urllib.parse import urlparse, parse_qs
 
@@ -13,14 +14,20 @@ except ImportError:
     print('This package only works within Jupyter/IPython accessed from a browser.')
     _ipython_support = False
 
+raw_url = ''
 params = defaultdict(lambda: None)
 raw_params = defaultdict(lambda: None)
+notebook_name = ''
 
 def update_params(url):
+    global raw_url
     global params
     global raw_params
+    global notebook_name
 
+    raw_url = url
     parsed = urlparse(url)
+    notebook_name = basename(parsed.path)
     _raw_params = parse_qs(parsed.query)
 
     for k, v in _raw_params.items():

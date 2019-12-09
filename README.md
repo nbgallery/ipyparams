@@ -2,7 +2,7 @@
 
 Send parameters/arguments to notebooks via URL query string parameters.
 
-## Example
+## Examples
 
 If you want to prepopulate parameters like `foo=bar` and `baz=1` in a notebook, you can simply encode them in the URL:
 
@@ -41,4 +41,19 @@ If you try to access a parameter that does not exist, you will simply get `None`
 import ipyparams
 ipyparams.params['unicorn']      # returns None
 ipyparams.raw_params['unicorn']  # returns None
+```
+
+### Get the notebook name
+
+```python
+import ipyparams
+ipyparams.notebook_name  # returns 'awesome_notebook.ipynb'
+```
+
+### Get the full, raw URL of the notebook
+
+```python
+import ipyparams
+ipyparams.raw_url
+# returns https://your.jupyter.server/awsome_notebook.ipynb?foo=bar&baz=1
 ```

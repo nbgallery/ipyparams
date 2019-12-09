@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), 'r') as f:
 
 setup(
     name='ipyparams',
-    version='0.1.1',
+    version='0.2.0',
     author='Bill Allen',
     author_email='photo.allen@gmail.com',
     description='Send parameters/arguments to notebooks via URL query string parameters.',
